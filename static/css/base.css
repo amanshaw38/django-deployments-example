@@ -28,3 +28,16 @@ nav a {
 .form-container input {
     font-family: 'Roboto', sans-serif;
 }
+
+@media only screen and (max-device-width: 767px) {
+    .card-container {
+        position: absolute;
+    }
+    .card {
+        position: relative;
+        max-width: 767px;
+        margin: 50px auto;
+        min-width: 500px;
+        left: 20%;
+    }
+}

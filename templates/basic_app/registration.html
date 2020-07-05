@@ -5,26 +5,29 @@
 {% if registered %}
 <h1>Thank you for registering!</h1>
 {% else %}
-<div class="card">
-    <h5 class="card-header info-color white-text text-center py-4">
-        <strong>Register</strong>
-    </h5>
-    <!--Card content-->
-    <div class="card-body px-lg-5 pt-0">
-        <!-- Form -->
-        <form method="POST" class="text-center" style="color: #757575;" enctype="multipart/form-data">
-            {% csrf_token%}
-            <div class="container form-container">
-                {{user_form|crispy}}
-                {{profile_form|crispy}}
-                <!-- Sign in button -->
-                <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0"
-                    type="submit">Register</button>
-            </div>
-        </form>
-        <!-- Form -->
+<div class="card-container">
+    <div class="card">
+        <h5 class="card-header info-color white-text text-center py-4">
+            <strong>Register</strong>
+        </h5>
+        <!--Card content-->
+        <div class="card-body px-lg-5 pt-0">
+            <!-- Form -->
+            <form method="POST" class="text-center" style="color: #757575;" enctype="multipart/form-data">
+                {% csrf_token%}
+                <div class="container form-container">
+                    {{user_form|crispy}}
+                    {{profile_form|crispy}}
+                    <!-- Sign in button -->
+                    <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0"
+                        type="submit">Register</button>
+                </div>
+            </form>
+            <!-- Form -->
+        </div>
     </div>
 </div>
+
 
 {% endif %}
 {% endblock %}
