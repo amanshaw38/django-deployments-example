@@ -9,3 +9,22 @@ p {
 nav a {
     font-family: 'Raleway', sans-serif;
 }
+
+.card {
+    margin-top: 5%;
+    width: 50%;
+    left: 25%;
+}
+
+.form-container {
+    margin-top: 5%;
+}
+
+.form-container label {
+    float: left;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-container input {
+    font-family: 'Roboto', sans-serif;
+}

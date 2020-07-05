@@ -2,19 +2,38 @@
 {% load static %}
 
 {% block body_block %}
-<div class="jumbotron">
-    <form class="border border-light p-5" method="POST" action="{% url  'basic_app:user_login' %}">
-        {% csrf_token%}
-        <p class="h4 mb-4 text-center">Login</p>
+<!-- Material form login -->
+<div class="card">
 
-        <input type="username" id="defaultLoginFormEmail" name="username" class="form-control mb-4"
-            placeholder="Username">
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Login</strong>
+    </h5>
 
-        <input type="password" id="defaultLoginFormPassword" name="password" class="form-control mb-4"
-            placeholder="Password">
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
 
-        <button class="btn btn-info btn-block my-4" type="submit">Login</button>
+        <!-- Form -->
+        <form method="POST" class="text-center" style="color: #757575;" action="{% url  'basic_app:user_login' %}">
+            {% csrf_token%}
+            <!-- Username -->
+            <div class="md-form">
+                <input type="text" id="materialLoginFormEmail" class="form-control" name="username">
+                <label for="materialLoginFormEmail">Username</label>
+            </div>
 
-    </form>
+            <!-- Password -->
+            <div class="md-form">
+                <input type="password" id="materialLoginFormPassword" class="form-control" name="password">
+                <label for="materialLoginFormPassword">Password</label>
+            </div>
+
+            <!-- Sign in button -->
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign
+                in</button>
+        </form>
+        <!-- Form -->
+
+    </div>
 </div>
+<!-- Material form login -->
 {% endblock %}

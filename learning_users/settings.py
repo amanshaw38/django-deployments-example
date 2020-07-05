@@ -27,7 +27,7 @@ SECRET_KEY = 'jqvwl3fecxgg+1bwwp5nla7dadwqt4uxbz&iajat)ni+=yjy4b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['amanshaw.pythonanywhere.com', ]
+ALLOWED_HOSTS = ['amanshaw.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -40,8 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'basic_app',
+    'crispy_forms',
 ]
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
